@@ -1,44 +1,32 @@
 # neural_network_challenge_1
 
 Part 1: Prepare the data for use on a neural network model
-Using your knowledge of Pandas and scikit-learn’s StandardScaler(), preprocess the dataset so that you can use it to compile and evaluate the neural network model later.
+Using Pandas and scikit-learn’s StandardScaler(), preprocess the dataset to compile and evaluate the neural network model later.
 
-Open the starter code file and complete the following data preparation steps:
+Read the data from https://static.bc-edx.com/ai/ail-v-1-0/m18/lms/datasets/student-loans.csvLinks to an external site. into a Pandas DataFrame. Review the DataFrame, looking for columns that define your features and target variables.
 
-Read the data from https://static.bc-edx.com/ai/ail-v-1-0/m18/lms/datasets/student-loans.csvLinks to an external site. into a Pandas DataFrame. Review the DataFrame, looking for columns that could eventually define your features and target variables.
-
-Create the features (X) and target (y) datasets. The target dataset should be defined by the “credit_ranking” column. The remaining columns should define the features dataset.
+Create the features (X) and target (y) datasets. The target dataset defined by the “credit_ranking” column. The remaining columns should define the features dataset.
 
 Split the features and target sets into training and testing datasets.
 
 Use scikit-learn's StandardScaler to scale the features data.
 
 Part 2: Compile and Evaluate a Model Using a Neural Network
-Use your knowledge of TensorFlow to design a deep neural network model. This model should use the dataset’s features to predict the credit quality of a student based on the features in the dataset. Consider the number of inputs before determining the number of layers that your model will contain or the number of neurons on each layer. Then, compile and fit your model. Finally, evaluate the model to calculate its loss and accuracy.
-
-To do so, complete the following steps:
+Use TensorFlow to design a deep neural network model. This model should use the dataset’s features to predict the credit quality of a student based on the features in the dataset. Consider the number of inputs before determining the number of layers that the model will contain or the number of neurons on each layer. Then, compile and fit the model. Finally, evaluate the model to calculate its loss and accuracy.
 
 Create a deep neural network by assigning the number of input features, the number of layers, and the number of neurons on each layer using TensorFlow’s Keras.
 
-hint
 Compile and fit the model using the binary_crossentropy loss function, the adam optimizer, and the accuracy evaluation metric.
 
-hint
 Evaluate the model using the test data to determine the model’s loss and accuracy.
 
-Save and export your model to a keras file, and name the file student_loans.keras.
+Save and export the model to a keras file, and name the file student_loans.keras.
 
-note
- 
 
-Remember to download your saved model from Colab so you can upload it to your GitHub repo.
+Part 3: Predict loan repayment success by using the neural network model
+Use the model saved in the previous section to make predictions on the reserved testing data.
 
-Part 3: Predict loan repayment success by using your neural network model
-Use the model you saved in the previous section to make predictions on your reserved testing data.
-
-To do so, complete the following steps:
-
-Reload your saved model.
+Reload the saved model.
 
 Make predictions on the testing data, saving them to a DataFrame and rounding the predictions to binary values.
 
